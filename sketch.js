@@ -922,18 +922,18 @@ function drawLlistaScreen() {
   let maxResultsPerColumn = 10;
 
   // Dibuixar els resultats en tres columnes
-  for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < maxResultsPerColumn; j++) {
-      let index = i * maxResultsPerColumn + j;
-      if (index < rankings.length) {
-        let x = 75 + i * columnWidth + 10;
-        let y = 130 + j * rowHeight;
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < maxResultsPerColumn; j++) {
+    let index = i * maxResultsPerColumn + j;
+    if (index < rankings.length) {
+      let x = 75 + i * columnWidth + 10;
+      let y = 130 + j * rowHeight;
 
-        // Mostrar el nom i els punts
-        textSize(25);
-        textAlign(CENTER, TOP);
-       text(`${index + 1}. ${rankings[index].name}: ${rankings[index].points}`, x, y);
-      }
+      // Mostrar el nom i els punts
+      textSize(25);
+      textAlign(LEFT, TOP);
+      text(`${index + 1}. ${rankings[index].name}: ${rankings[index].points}`, x, y);
     }
   }
+}
 }
