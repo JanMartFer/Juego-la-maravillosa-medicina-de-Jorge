@@ -534,7 +534,7 @@ function drawGameInfo() {
   // Configuració de separació i estil
   const margin = 10;
   const spacing = 100; // Reduït per fer lloc als botons
-  const boxWidth = 80; // Amplada més petita
+  const boxWidth = 90; // Amplada més petita
   const boxHeight = 40; // Alçada més petita
 
   // Configurar textSize i textAlign explícitament cada vegada
@@ -542,8 +542,8 @@ function drawGameInfo() {
   textAlign(CENTER, CENTER);
 
   // Dibuixa cada element amb un quadrat de fons
-  drawInfoBox(`Puntos: ${points}`, margin, 15, boxWidth, boxHeight);
-  drawInfoBox(`Vidas: ${lives}`, margin + spacing, 15, boxWidth, boxHeight);
+  drawInfoBox(`Puntos: ${points}/10`, margin, 15, boxWidth, boxHeight);
+  drawInfoBox(`Vidas: ${lives}/3`, margin + spacing, 15, boxWidth, boxHeight);
   drawInfoBox(
     `Tiempo: ${timer}s`,
     margin + spacing * 2,
